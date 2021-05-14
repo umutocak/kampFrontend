@@ -7,6 +7,9 @@ import { ProductComponent } from './components/product/product.component';
 import { NaviComponent } from './components/navi/navi.component';
 import { CategoryComponent } from './components/category/category.component';
 import { HttpClientModule } from '@angular/common/http';
+import { VatAddedPipe } from './pipes/vat-added.pipe';
+import { FormsModule } from '@angular/forms';
+import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { HttpClientModule } from '@angular/common/http';
     ProductComponent,
     NaviComponent,
     CategoryComponent,
+    VatAddedPipe,
+    FilterPipePipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
